@@ -23,6 +23,10 @@ import org.apache.hadoop.util.ToolRunner;
 // java org.apache.hadoop.fs.FsShell -put WordCount.txt /user/trainings
 
 // java -cp CLASSPATH org.laboros.hdfs.HDFSService WordCount.txt /user/trainings
+
+//ACTUAL COMMAND
+
+//java -cp HDFSDemo.jar:../hadoopjars/* com.laboros.hdfs.HDFSService WordCount.txt /user/trainings
 public class HDFSService extends Configured implements Tool {
 
 	// This is my entry method
