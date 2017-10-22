@@ -27,6 +27,9 @@ import org.apache.hadoop.util.ToolRunner;
 //ACTUAL COMMAND
 
 //java -cp HDFSDemo.jar:../hadoopjars/* com.laboros.hdfs.HDFSService WordCount.txt /user/trainings
+
+//yarn jar HDFSDemo.jar com.laboros.hdfs.HDFSService WordCount.txt /user/trainings
+
 public class HDFSService extends Configured implements Tool {
 
 	// This is my entry method
