@@ -18,6 +18,15 @@ public class WordCountReducer extends
 			java.lang.Iterable<IntWritable> values,
 			Context context)
 			throws java.io.IOException, InterruptedException {
+		//key -- DEER 
+//		values --> {1,1,1,1,1}
+		
+		int sum = 0;
+		
+		for (IntWritable value : values) {
+			sum = sum+value.get();
+		}
+		context.write(key, new IntWritable(sum));
 	};
 
 	protected void cleanup(
