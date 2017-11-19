@@ -22,6 +22,7 @@ public class WeatherReducer extends
 
 		String max_temp_recorded_date = null;
 		float identified_max_temp = Float.MIN_VALUE;
+		String fileName = null;
 
 		for (Text date_max_temp : values) {
 
@@ -36,10 +37,11 @@ public class WeatherReducer extends
 			
 				identified_max_temp=Float.parseFloat(tokens[1]);
 				max_temp_recorded_date = tokens[0];
+				fileName = tokens[2];
 			}
 		}
 		
-		context.write(key, new Text(max_temp_recorded_date + "\t" + identified_max_temp));
+		context.write(key, new Text(max_temp_recorded_date + "\t" + identified_max_temp+"\t"+fileName));
 	};
 
 	protected void cleanup(Context context) throws java.io.IOException,
