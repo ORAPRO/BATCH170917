@@ -24,7 +24,7 @@ public class WordCountMapper extends
 		//key -- > 0
 		//value --> DEER RIVER RIVER
 		
-		final long inputOffset = key.get();
+//		final long inputOffset = key.get();
 		final String inputLine = value.toString();
 		
 		if(StringUtils.isNotEmpty(inputLine))
