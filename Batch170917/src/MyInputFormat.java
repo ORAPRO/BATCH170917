@@ -11,6 +11,8 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 public class MyInputFormat extends FileInputFormat<MyKey,MyValue> {
 	
 	
+	
+	
 	@Override
 	public RecordReader<MyKey, MyValue> createRecordReader(InputSplit arg0,
 			TaskAttemptContext arg1) throws IOException, InterruptedException {
